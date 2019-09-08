@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isupper(char c)
+int		ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);
