@@ -2,16 +2,17 @@ NAME = libft.a
 
 SRC = ./*.c
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:%.c=%.o)
 
 .PHONY = all clean fclean re
 
 all: $(NAME)
 
 $(NAME):
+		%.c:%.o
 		gcc -c -Wall -Wextra -Werror $(SRC) -I .
 		ar qc $(NAME) $(OBJ)
-		ranlib $(NAME)
+		ranlib $(NAME)	
 
 clean:
 		rm -rf $(OBJ)
