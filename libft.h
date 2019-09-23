@@ -6,7 +6,7 @@
 /*   By: syesseni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 04:54:45 by syesseni          #+#    #+#             */
-/*   Updated: 2019/09/05 05:13:51 by syesseni         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:19:20 by syesseni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-int		ft_isascii(int c)
+int		ft_isascii(int c);
 int 	ft_tolower(int c);
 int 	ft_toupper(int c);
 void	ft_bzero(void *s, size_t n);
@@ -64,7 +64,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /* Part 2 */
@@ -87,6 +87,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 void	ft_strclr(char *s);
 void	ft_strdel(char **as);
 char	*ft_strnew(size_t size);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s);
 
 /* Bonus part */
 t_list	*ft_lstnew(void const *content, size_t content_size);
