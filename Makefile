@@ -9,10 +9,10 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME):
-		%.c:%.o
 		gcc -c -Wall -Wextra -Werror $(SRC) -I .
 		ar qc $(NAME) $(OBJ)
-		ranlib $(NAME)	
+		ranlib $(NAME)
+		%.c:%.o	
 
 clean:
 		rm -rf $(OBJ)
