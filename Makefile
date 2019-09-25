@@ -3,6 +3,7 @@ CFLAGS = -Wall -Wextra -Werror -I . -c
 
 SRC = ft_atoi.c \
 	ft_bzero.c \
+	ft_del_list.c \
 	ft_digits_num.c \
 	ft_isalnum.c \
 	ft_isalpha.c \

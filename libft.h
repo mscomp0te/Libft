@@ -17,10 +17,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-# define INT_MAX 2147483647
-# define INT_MIN 2147483648
-# define LONG_MAX 9223372036854775807 
-# define LONG_MIN 9223372036854775808
+# define MAX_INT 2147483647
+# define MIN_INT 2147483648
+# define MAX_LONG 9223372036854775807 
+# define MIN_LONG 9223372036854775808
 
 typedef struct		s_list
 {
@@ -38,6 +38,7 @@ size_t	ft_strnlen(const char *s, size_t maxlen);
 size_t	ft_strlenc(const char *s, char c);
 int		ft_words_num(const char *s, char c);
 void	*ft_realloc(void *ptr, size_t size);
+void	ft_del_list(t_list	*lst);
 
 /* Part 1 */
 int		ft_atoi(const char *str);

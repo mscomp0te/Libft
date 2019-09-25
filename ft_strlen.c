@@ -2,15 +2,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int		i;
+	int		len;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	main()
-{
-	ft_putnbr((int)ft_strlen("hello"));
+	if (!s)
+		return (0);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }

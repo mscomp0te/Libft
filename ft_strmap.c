@@ -6,7 +6,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 
 	i = -1;
-	if (!s || !f || size + 1 < size ||
+	if (!s || !f || ft_strlen(s) + 1 < ft_strlen(s) ||
 		!(res = (char *)malloc(ft_strlen(s) + 1)))
 		return (NULL);
 	while (s[++i])

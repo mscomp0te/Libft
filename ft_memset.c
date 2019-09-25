@@ -3,7 +3,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*str;
-	int				i;
+	size_t			i;
 
 	i = 0;
 	if (!len)

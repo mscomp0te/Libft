@@ -3,12 +3,12 @@
 static int	check_overs(int n, int sign)
 {
 	if (sign == -1)
-		if ((unsigned long long)n * sign < -1 * LONG_MIN)
+		if ((unsigned long long)n - 1 > MAX_LONG)
 			return (0);
 		else
 			return (n * sign);
 	else
-		if ((unsigned long long)n > LONG_MAX)
+		if ((unsigned long long)n > MAX_LONG)
 			return (-1);
 		else
 			return (n);

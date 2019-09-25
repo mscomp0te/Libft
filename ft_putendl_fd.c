@@ -3,5 +3,5 @@
 void	ft_putendl_fd(char const *s, int fd)
 {
 	ft_putstr(s);
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

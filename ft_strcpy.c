@@ -2,9 +2,9 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	int		i;
 
+	// if (dst == (char *)src)
+	// 	return ((void *)0);
 	i = 0;
-	if (dst == src)
-		return (NULL);
 	while (dst[i])
 	{
 		dst[i] = src[i];

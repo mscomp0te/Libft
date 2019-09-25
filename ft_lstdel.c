@@ -2,8 +2,18 @@
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (!del)
+	t_list	*tmp;
+	t_list	*next;
+
+	if (!del && !*alst)
 		return ;
-	while (alst->next)
-		ft_lstdelone(alst, del(alst->content, alst->content_size));
+	tmp = *alst;
+	while (tmp)
+	{
+		next = tmp->next;
+		del(tmp->content, tmp->content_size);
+		free(tmp);
+		tmp = next;
+	}
+	*alst = NULL;
 }
