@@ -7,8 +7,10 @@ char	*ft_strtrim(char const *s)
 	int		max;
 	int		k;
 
-	if (!s || ft_strlen(s) + 1 < ft_strlen(s) ||
-		!(res = (char *)malloc(ft_strlen(s) + 1)))
+	// if (!s || ft_strlen(s) + 1 < ft_strlen(s) ||
+	// 	!(res = (char *)malloc(ft_strlen(s) + 1)))
+	// 	return (NULL);
+	if (!s)
 		return (NULL);
 	min = 0;
 	max = ft_strlen(s);
@@ -17,7 +19,7 @@ char	*ft_strtrim(char const *s)
 	while (s[max] == ' ' || s[max] == '\n' || s[max] == '\t')
 		max--;
 	if (max == min || !(res = (char *)malloc(max - min + 1)))
-		return (NULL);
+		return (ft_strnew(1));
 	k = 0;
 	while (min < max)
 	{

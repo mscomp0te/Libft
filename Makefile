@@ -76,7 +76,7 @@ NAME = libft.a
 
 all: $(NAME)
 $(NAME): $(OBJ) libft.h
-	ar qc $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@

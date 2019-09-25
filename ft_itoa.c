@@ -7,16 +7,16 @@ char	*ft_itoa(int n)
 	int		num;
 	int		i;
 
+	ПРОВЕРКА НА MAX INT и MIN INT
 	sign = 0;
 	num = ft_digits_num(n);
 	i = num;
-	if (n < 0)
+	if (n < 0)S
 		sign = 1;
 	if (!(res = (char *)malloc(num + sign) + 1))
 		return (NULL);
 	if (sign)
 		res[0] = '-';
-	i -= 1;
 	while (i > sign)
 	{
 		res[i] = (char)(n % 10 + 48);

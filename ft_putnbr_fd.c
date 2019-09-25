@@ -10,7 +10,7 @@ void	ft_putnbr_fd(int n, int fd)
 			write(fd, "-", 1);
 			n *= -1;
 		}
-		while (n > 9)
+		if (n > 9)
 			ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd(n % 10 + 48, fd);
 }

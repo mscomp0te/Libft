@@ -2,16 +2,15 @@
 
 void	ft_del_list(t_list	*lst)
 {
-	t_list	*tmp;
 	t_list	*next;
 
 	if (!lst)
 		return ;
-	tmp = lst;
-	while (tmp)
+	while (lst)
 	{
-		next = tmp->next;
-		free(tmp);
-		tmp = next;
+		next = lst->next;
+		free(lst);
+		lst = next;
 	}
+	lst = NULL;
 }
