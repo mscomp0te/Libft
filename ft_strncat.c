@@ -10,8 +10,8 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	while (i < n && src[i])
 	{
 		dest[dest_len + i] = src[i];
-		dest[dest_len + i] = '\0';
 		i++;
 	}
+	dest[dest_len + i] = '\0';
 	return (dest);
 }

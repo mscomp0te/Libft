@@ -9,14 +9,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	if (dst_len + 1 < dst_len || src_len + 1 < src_len)
 		return (dst_len);
-	if (dst_len == size)
-		return (src_len + size);
-	if (src_len < size - dst_len)
-		ft_memcpy(dst + dst_len, src, src_len + 1);
-	else
+	if (size > dst_len)
 	{
-		ft_memcpy(dst + dst_len, src, size - 1);
-		dst[dst_len + size - 1] = '\0';
+		ft_memcpy(dst + dst_len, src, src_len + 1);
+		dst[dst_len + src_len + 1] = '\0';
 	}
+	else
+		ft_memcpy(dst + dst_len, src, size);
+	// if (src_len < size - dst_len)
+	// {
+	// 	ft_memcpy(dst + dst_len, src, src_len + 1);
+	// 	dst[dst_len + src_len + 1] = '\0';
+	// }
+	// else
+	// 	ft_memcpy(dst + dst_len, src, size - 1);
 	return (dst_len + src_len);
 }

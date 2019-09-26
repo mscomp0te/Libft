@@ -4,18 +4,24 @@ t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
 {
 	t_list	*tmp;
 	t_list	*new_list;
+	t_list	*begin;
 
-	if (!lst || !f || !(new_list = (t_list *)malloc(sizeof(t_list))))
+	if (!lst || !f)
 		return (NULL);
-	tmp = lst;
-	while (tmp)
+	tmp = f(lst);
+	if (!(new_list = ft_lstnew(tmp->content, tmp->content_size)))
+		return (NULL);
+	begin = new_list;
+	while (new_list->next)
 	{
-		if (!(new_list = f(tmp)))
+		tmp = tmp->next;
+		new_list = new_list->next;
+		tmp = f(lst);
+		if (!(new_list = ft_lstnew(tmp->content, tmp->content_size)))
 		{
 			ft_del_list(new_list);
 			return (NULL);
 		}
-		tmp = tmp->next;
 	}
-	return (new_list);
+	return (begin);
 }

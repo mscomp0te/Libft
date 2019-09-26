@@ -7,11 +7,11 @@ char	*ft_itoa(int n)
 	int		num;
 	int		i;
 
-	ПРОВЕРКА НА MAX INT и MIN INT
+	
 	sign = 0;
 	num = ft_digits_num(n);
 	i = num;
-	if (n < 0)S
+	if (n < 0)
 		sign = 1;
 	if (!(res = (char *)malloc(num + sign) + 1))
 		return (NULL);

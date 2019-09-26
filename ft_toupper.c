@@ -2,7 +2,7 @@
 
 int		ft_toupper(int c)
 {
-	if (ft_islower(c) == 1)
-		c = c + 32;
+	if (ft_islower(c))
+		c -=32;
 	return (c);
 }

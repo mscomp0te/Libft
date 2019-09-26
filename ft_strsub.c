@@ -5,7 +5,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char			*res;
 	unsigned int	i;
 
-	if (!len || len + 1 < len || !(res = (char *)malloc(len + 1)))
+	if (!s || !len || len + 1 < len || start > len
+		|| !(res = (char *)malloc(len + 1)))
 		return (NULL);
 	i = 0;
 	while (s[start + i])

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I . -c
+CFLAGS = -Wall -Wextra -Werror -I. -c
 
 SRC = ft_atoi.c \
 	ft_bzero.c \
@@ -75,9 +75,11 @@ NAME = libft.a
 .PHONY = all clean fclean re
 
 all: $(NAME)
+	
 $(NAME): $(OBJ) libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
