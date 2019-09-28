@@ -1,8 +1,10 @@
+#include <stdio.h>
+
 int		ft_digits_num(int n)
 {
 	int		k;
 
-	k = 0;
+	k = 1;
 	if (n < 0)
 		n *= -1;
 	while (n > 9)
@@ -12,3 +14,4 @@ int		ft_digits_num(int n)
 	}
 	return (k);
 }
+

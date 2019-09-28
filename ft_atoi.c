@@ -1,17 +1,34 @@
 #include "libft.h"
 
+// static int	check_overs(int n, int sign)
+// {
+// 	if (sign == -1)
+// 		if ((unsigned long long)n - 1 > MAX_LONG)
+// 			return (0);
+// 		else
+// 			return (n * sign);
+// 	else
+// 		if ((unsigned long long)n > MAX_LONG)
+// 			return (-1);
+// 		else
+// 			return (n);
+// }
+
+// static int	check_overs(int n, int sign)
+// {
+// 	if (n > MAX_LONG)
+// 	{
+// 		if (sign == -1)
+// 			return (0);
+// 		else
+// 			return (-1);
+// 	}
+// 	return (n * sign);
+// }
+
 static int	check_overs(int n, int sign)
 {
-	if (sign == -1)
-		if ((unsigned long long)n - 1 > MAX_LONG)
-			return (0);
-		else
-			return (n * sign);
-	else
-		if ((unsigned long long)n > MAX_LONG)
-			return (-1);
-		else
-			return (n);
+	return (n * sign);
 }
 
 int			ft_atoi(const char *str)

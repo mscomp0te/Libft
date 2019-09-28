@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_itoa(int n)
 {
@@ -6,7 +7,6 @@ char	*ft_itoa(int n)
 	int		sign;
 	int		num;
 	int		i;
-
 	
 	sign = 0;
 	num = ft_digits_num(n);
@@ -16,13 +16,16 @@ char	*ft_itoa(int n)
 	if (!(res = (char *)malloc(num + sign) + 1))
 		return (NULL);
 	if (sign)
-		res[0] = '-';
-	while (i > sign)
 	{
-		res[i] = (char)(n % 10 + 48);
-		n /= 10;
-		i--;
+		res[0] = '-';
+		n *= -1;
+		i += 1;
 	}
-	res[num] = '\0'; 
+	while (i-- > sign)
+	{
+		res[i] = (n % 10) + '0';
+		n /= 10;
+	}
+	res[num + sign + 1] = '\0'; 
 	return (res);
 }

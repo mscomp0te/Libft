@@ -20,6 +20,7 @@ SRC = ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
+	ft_lstzero.c \
 	ft_memalloc.c \
 	ft_memccpy.c \
 	ft_memchr.c \
@@ -61,11 +62,13 @@ SRC = ft_atoi.c \
 	ft_strnlen.c \
 	ft_strnstr.c \
 	ft_strrchr.c \
+	ft_strrev.c \
 	ft_strsplit.c \
 	ft_strstr.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
+	ft_topower.c \
 	ft_toupper.c \
 	ft_words_num.c \
 

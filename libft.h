@@ -34,11 +34,14 @@ int		ft_isspace(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_digits_num(int n);
+double	ft_topower(int num, int pow);
+char	*ft_strrev(const char *s, size_t len);
 size_t	ft_strnlen(const char *s, size_t maxlen);
 size_t	ft_strlenc(const char *s, char c);
 int		ft_words_num(const char *s, char c);
 void	*ft_realloc(void *ptr, size_t size);
-void	ft_del_list(t_list	*lst);
+void	ft_del_list(t_list *lst);
+void	ft_lstzero(t_list **alst);
 
 /* Part 1 */
 int		ft_atoi(const char *str);
