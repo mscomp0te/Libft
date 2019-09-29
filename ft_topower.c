@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_topower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: syesseni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 21:07:44 by syesseni          #+#    #+#             */
+/*   Updated: 2019/09/28 21:07:46 by syesseni         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include "stdio.h"
 
 double	ft_topower(int num, int pow)
 {
@@ -14,7 +25,7 @@ double	ft_topower(int num, int pow)
 	{
 		while (++i < pow * (-1))
 			res *= (double)num;
-		res = 1/res;
+		res = 1 / res;
 	}
 	else
 		while (++i < pow)

@@ -1,20 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlenc.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: syesseni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 21:07:05 by syesseni          #+#    #+#             */
+/*   Updated: 2019/09/28 21:07:06 by syesseni         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t	ft_strlenc(const char *s, char c)
+size_t	ft_strlenc(char const *s, char c)
 {
 	size_t	len;
 	int		i;
 
-	if (!s)
-		return (-1);
-	i = 0;
 	len = 0;
-	while (((char *)s)[i] == c && s[i])
+	i = 0;
+	while (s[i] == c && s[i])
 		i++;
-	while (((char *)s)[i] != c && s[i] && s[i])
+	while (s[len] != c && s[len] && s[len])
 	{
-		i++;
 		len++;
+		i++;
 	}
 	return (len);
 }

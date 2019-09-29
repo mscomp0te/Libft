@@ -1,27 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: syesseni <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/28 21:07:30 by syesseni          #+#    #+#             */
+/*   Updated: 2019/09/28 21:07:32 by syesseni         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**arr;
-	int		i;
-	size_t	j;
+	int		j;
 	int		k;
 
-	i = 0;
 	k = 0;
-	if (!s || !(arr = (char **)malloc(sizeof(*arr)
+	j = -1;
+	if (!s || !c || !(arr = (char **)malloc(sizeof(char *)
 		* (ft_words_num(s, c) + 1))))
 		return (NULL);
-	while (i < ft_words_num(s, c))
+	while (++j < ft_words_num(s, c))
 	{
-		j = 0;
-		while (j < ft_strlenc(s + k, c))
+		while (s[k] == c)
+			k++;
+		if (!(arr[j] = (char *)malloc(sizeof(char) * ft_strlenc(s + k, c))))
 		{
-			arr[i][j] = ((char *)s + k)[j];
-			j++;
+			ft_del_twodem_arr(arr);
+			return (NULL);
 		}
-		i++;
+		arr[j] = ft_strncpy(arr[j], s + k, ft_strlenc(s + k, c));
+		arr[j][ft_strlenc(s + k, c)] = '\0';
+		while (s[k] && s[k] != c)
+			k++;
 	}
-	arr[i] = NULL;
+	arr[j] = NULL;
 	return (arr);
 }

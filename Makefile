@@ -4,6 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -I. -c
 SRC = ft_atoi.c \
 	ft_bzero.c \
 	ft_del_list.c \
+	ft_del_twodem_arr.c \
 	ft_digits_num.c \
 	ft_isalnum.c \
 	ft_isalpha.c \
@@ -81,7 +82,6 @@ all: $(NAME)
 	
 $(NAME): $(OBJ) libft.h
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
