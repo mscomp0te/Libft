@@ -46,7 +46,9 @@ void				*ft_realloc(void *ptr, size_t org_size,
 	size_t new_size);
 void				ft_del_twodem_arr(char **arr);
 void				ft_del_list(t_list *lst);
+void				ft_del_elem(t_list *lst, size_t num);
 void				ft_lstzero(t_list **alst);
+size_t				ft_lstcount(t_list *lst);
 
 /*
 ***** Part 1 *****
