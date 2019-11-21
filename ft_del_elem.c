@@ -8,8 +8,11 @@ void		ft_del_elem(t_list *lst, size_t num)
 	if (!lst || !num)
 		return ;
 	tmp = lst;
-	while ((num - 1)-- > 1)
+	while ((num - 1) > 1)
+	{
 		tmp = tmp->next;
+		num--;
+	}
 	node = tmp;
 	node->next = (node->next)->next;
 	tmp = tmp->next;
